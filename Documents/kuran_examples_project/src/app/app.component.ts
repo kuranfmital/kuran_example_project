@@ -5,10 +5,13 @@ import 'rxjs/add/operator/map';
 
 @Component({
   selector: 'my-app',
- // templateUrl: '/app.component.html',
+//templateUrl: '/app.component.html',
  // styleUrls: ['./app.component.css']
   template: `
- <div class="card">
+  <div class="section">Filter Options
+  <button type="button" class="collapse-button" data-toggle="collapse" data-target="#demo">_</button>  
+  <hr>
+  <div id="demo" class="collapse in">
   <ul style="list-style-type:none"> 
     <ng-container *ngFor="let patient of data">
        <li class="patient-details"> 
@@ -21,8 +24,25 @@ import 'rxjs/add/operator/map';
        </li>
     </ng-container>
   </ul>  
- </div>`,
+  </div>
+</div>`,
  styles: [`
+ .section {
+   border: 1px;
+   width: 75%;
+   margin: 0 auto;
+
+ }
+  .collapse-button {'
+    overflow: hidden;
+    color: Black;
+    background-color: Transparent;
+    border: none;
+    width: 20px;
+    float: right;
+    padding: 3px;
+    border-radius: 3px;
+ }
   ul {
     list-style-type: square;
   }
