@@ -1,0 +1,112 @@
+.section {
+    border: 1px;
+    width: 85%;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+   .collapse-button {
+     overflow: hidden;
+     color: Black;
+     background-color: Transparent;
+     border: none;
+     width: 20px;
+     float: right;
+     border-radius: 3px;
+  }
+  .cases_sq {
+      display: table-cell;
+      border-spacing: 0;
+      color: white;  
+      vertical-align: middle;  
+      overflow: hidden;  
+    }
+  .cases_name{
+      background: #80005A;
+      height: 100px;
+      width: 100px;
+      display: table-cell;
+      text-align: center;
+      vertical-align: middle;
+      padding: 5px;
+      overflow: hidden;
+    }
+  .cases_number{
+      background: #CF66AC;
+      width: 50px;
+      display: table-cell;
+      text-align: center;
+      vertical-align: middle;
+      height: 100px;
+      padding: 5px;
+      font-weight: bold;
+      font-size: 20px;
+      overflow: hidden;
+  }
+  #filter_options {
+    display: inline-block;
+      width: 100%;
+      overflow: hidden;
+      margin: 0 auto;
+      background: #ffdddd;
+
+      border-radius: 20px;
+  }
+  .check_section {
+      display: table-cell;
+      width: 50%;
+      overflow: hidden;
+      padding: 5px;
+  }
+  .legend {
+   overflow: hidden;  
+   width: 100%;
+   background: #eeeeee;
+   color: Black;
+   margin: 0 auto;
+   padding: 3px;
+  }
+  #status_keys{
+    width: 60%;   
+    margin: 0 auto;
+    border-radius: 3px    
+  }
+  #service_type{
+   margin: 0 auto;   
+  }
+  .square{
+   width: 50px;
+    height: 25px; 
+    padding: 3px; 
+    float: left;
+  }
+  .legend-text{
+    float: left;
+    padding: 3px;
+  }
+   ul {
+     list-style-type: square;
+   }
+    .patient-details  {
+     overflow: hidden;      
+     display:inline-block;
+     text-align:center;
+     width: 88%;
+     background-color: #eeeeee;
+     color: Black;
+     margin: 0 auto;
+    }  
+    .patient-details:hover  {
+     background-color: #ffffff;
+    }  
+ .block{
+   padding: 3px;
+   display:inline-block;
+   text-align:center;
+   border-radius: 3px
+   
+ }
+ .service_img {
+   padding: 6px; 
+   width:140px; 
+   height:38px;
+ }

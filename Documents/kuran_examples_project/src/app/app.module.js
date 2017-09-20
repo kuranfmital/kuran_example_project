@@ -8,7 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
 var http_1 = require("@angular/http");
-//import { FormsModule } from '@angular/forms';
+var forms_1 = require("@angular/forms");
 var app_component_1 = require("./app.component");
 var AppModule = (function () {
     function AppModule() {
@@ -20,6 +20,7 @@ AppModule = __decorate([
         imports: [
             platform_browser_1.BrowserModule,
             http_1.HttpModule,
+            forms_1.FormsModule,
         ],
         declarations: [app_component_1.AppComponent],
         bootstrap: [app_component_1.AppComponent]
@@ -32,5 +33,5 @@ exports.AppModule = AppModule;
   $scope.$watch('toggle', function() {
     $scope.toggleText = $scope.toggle ? 'Toggle!' : 'some text';
   })
-})*/ 
+})*/
 //# sourceMappingURL=app.module.js.map
