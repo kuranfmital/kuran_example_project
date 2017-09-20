@@ -1,0 +1,15 @@
+<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Collapse</button>  
+ <div id="demo" class="collapse in">
+  <ul style="list-style-type:none"> 
+    <ng-container *ngFor="let patient of data">
+       <li class="patient-details"> 
+          <div class="block"><a href="./patientpage.html"> {{ patient.name }}</a></div>
+          <div class="block"> Patient ID: {{ patient.patientID }} </div>
+          <div class="block">  Date of Birth: {{ patient.dob }} </div>
+          <div class="block"> Service ID: {{ patient.serviceID }}</div>
+          <div class="block"> {{ patient.statusKey }}</div>    
+          <div class="block"> {{ patient.service }}</div>
+       </li>
+    </ng-container>
+  </ul>  
+</div>

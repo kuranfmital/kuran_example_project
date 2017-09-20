@@ -2,7 +2,6 @@ import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
 //import { FormsModule } from '@angular/forms';
-//import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent }  from './app.component';
 
@@ -10,10 +9,17 @@ import { AppComponent }  from './app.component';
   imports:      [ 
     BrowserModule, 
     HttpModule,
-    //FormsModule,
-    //NgbModule
+   // FormsModule,
   ],
   declarations: [ AppComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
+
+/*AppModule.controller('AppController', function ($scope) {
+  $scope.toggle = true;
+
+  $scope.$watch('toggle', function() {
+    $scope.toggleText = $scope.toggle ? 'Toggle!' : 'some text';
+  })
+})*/

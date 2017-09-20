@@ -9,7 +9,6 @@ var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
 var http_1 = require("@angular/http");
 //import { FormsModule } from '@angular/forms';
-//import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 var app_component_1 = require("./app.component");
 var AppModule = (function () {
     function AppModule() {
@@ -27,4 +26,11 @@ AppModule = __decorate([
     })
 ], AppModule);
 exports.AppModule = AppModule;
+/*AppModule.controller('AppController', function ($scope) {
+  $scope.toggle = true;
+
+  $scope.$watch('toggle', function() {
+    $scope.toggleText = $scope.toggle ? 'Toggle!' : 'some text';
+  })
+})*/ 
 //# sourceMappingURL=app.module.js.map
