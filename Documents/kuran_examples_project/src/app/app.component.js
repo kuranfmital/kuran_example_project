@@ -16,7 +16,8 @@ var AppComponent = (function () {
         this.http = http;
         this.apiUrl = 'http://www.mocky.io/v2/590212490f00006b18d2cb05';
         this.data = {}; // holds the imported data
-        this.count = 0;
+        this.filter_check = ['Completed', 'InProgress', 'ActionNeeded', 'BV', 'PA', 'CoPay', 'PAP', 'PR']; // holds the values of filter checkboxes
+        this.toggle1 = false;
         console.log('Hello user');
         this.getPatients();
         this.getData();
@@ -42,8 +43,28 @@ var AppComponent = (function () {
         }
         return count;
     }; // Counts the number of a completed 'service' in 'data' 
-    AppComponent.prototype.filterSearch = function (params) {
-        // params
+    AppComponent.prototype.checkFilters = function (service, status, filter) {
+        filter = this.updateList(filter);
+        if (filter.indexOf(service) != -1 && filter.indexOf(status) != -1) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    };
+    AppComponent.prototype.updateList = function (filter) {
+        var name = ['ch_completed', 'ch_progress', 'ch_action', 'ch_bv', 'ch_pa', 'ch_copay', 'ch_pap', 'ch_pr'];
+        var a;
+        for (a = 0; a < filter.length; a++) {
+            if (document.getElementById(name[a]).checked) {
+                filter[a] = document.getElementById(name[a]).value;
+            }
+            else {
+                filter[a] = "not" + document.getElementById(name[a]).value;
+            }
+        }
+        this.filter_check = filter;
+        return filter;
     };
     return AppComponent;
 }());
