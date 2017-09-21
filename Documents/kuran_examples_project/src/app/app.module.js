@@ -27,11 +27,4 @@ AppModule = __decorate([
     })
 ], AppModule);
 exports.AppModule = AppModule;
-/*AppModule.controller('AppController', function ($scope) {
-  $scope.toggle = true;
-
-  $scope.$watch('toggle', function() {
-    $scope.toggleText = $scope.toggle ? 'Toggle!' : 'some text';
-  })
-})*/
 //# sourceMappingURL=app.module.js.map

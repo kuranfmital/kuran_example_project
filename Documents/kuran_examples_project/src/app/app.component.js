@@ -43,6 +43,10 @@ var AppComponent = (function () {
         }
         return count;
     }; // Counts the number of a completed 'service' in 'data' 
+    AppComponent.prototype.changeToggle = function () {
+        alert("here!");
+        this.toggle1 = !toggle1;
+    };
     AppComponent.prototype.checkFilters = function (service, status, filter) {
         filter = this.updateList(filter);
         if (filter.indexOf(service) != -1 && filter.indexOf(status) != -1) {

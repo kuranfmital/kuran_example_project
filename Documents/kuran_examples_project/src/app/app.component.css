@@ -1,3 +1,6 @@
+.hide {
+  display: none;
+}
 .section {
     border: 1px;
     width: 85%;
@@ -89,7 +92,8 @@
      overflow: hidden;      
      display:inline-block;
      text-align:center;
-     width: 88%;
+     align: center;
+     width: 85%;
      background-color: #eeeeee;
      color: Black;
      margin: 0 auto;
@@ -102,7 +106,6 @@
    display:inline-block;
    text-align:center;
    border-radius: 3px
-   
  }
  .service_img {
    padding: 6px; 

@@ -9,8 +9,8 @@ import 'rxjs/add/operator/map';
   
 })
 export class AppComponent {
-  private apiUrl = 'http://www.mocky.io/v2/590212490f00006b18d2cb05';
-  data: any = {}; // holds the imported data
+private apiUrl = 'http://www.mocky.io/v2/590212490f00006b18d2cb05';
+data: any = {}; // holds the imported data
   filter_check = ['Completed', 'InProgress', 'ActionNeeded', 'BV', 'PA', 'CoPay', 'PAP', 'PR']; // holds the values of filter checkboxes
   toggle1 = false;  
 
@@ -43,7 +43,10 @@ export class AppComponent {
     return count
   } // Counts the number of a completed 'service' in 'data' 
 
-
+changeToggle() {
+  alert("here!")
+  this.toggle1 = !toggle1;
+}
   checkFilters(service, status, filter) {
   filter = this.updateList(filter)
     if (filter.indexOf(service) != -1 && filter.indexOf(status) != -1) {

@@ -14,15 +14,5 @@ import { AppComponent }  from './app.component';
   declarations: [ AppComponent ],
   bootstrap:    [ AppComponent ]
 })
-export class AppModule { 
-  
+export class AppModule {  
 }
-
-
-/*AppModule.controller('AppController', function ($scope) {
-  $scope.toggle = true;
-
-  $scope.$watch('toggle', function() {
-    $scope.toggleText = $scope.toggle ? 'Toggle!' : 'some text';
-  })
-})*/

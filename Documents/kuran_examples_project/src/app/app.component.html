@@ -1,7 +1,7 @@
 <div class="container" style="width: 100%;">
   <div style="font-size:20px">Cases</div>
   <div class="section"> Completed Cases over the past 7 days
-    <button type="button" class="collapse-button" data-toggle="collapse" data-target="#completed_cases">+</button>
+    <button type="button" class="collapse-button" data-toggle="collapse" data-target="#completed_cases">_</button>
     <hr>
     <div style="height: 100px; display: inline-block; border-spacing: 8px;
   " id="completed_cases">
@@ -31,12 +31,13 @@
   <br>
 
   <div class="section">Current Cases
-    <button ng-model="toggle1" ng-click="toggle1 = !toggle1" type="button" class="collapse-button" data-toggle="collapse" data-target="#patient_section" > 
-        <span ng-show="toggle1 == 1">+</span>          
+    <button type="button" class="collapse-button" data-toggle="collapse" data-target="#patient_section" > <!-- ng-click will toggle ng-show/hide --> 
+        <span [class.hide]="toggle1">+</span>      <!-- ng-show and ng-hide will replace this -->
+        <span [class.hide]="!toggle1">_</span>                  
       </button>
     <hr>
     <div id="patient_section" class="section">Filter Options
-      <button type="button" class="collapse-button" data-toggle="collapse" data-target="#filter_options">+</button>
+      <button type="button" class="collapse-button" data-toggle="collapse" data-target="#filter_options">_</button>
       <hr>
 
       <div id="filter_options" class="collapse">
@@ -104,6 +105,7 @@
         <ul id="listPatients" class="patient-list" style="list-style-type:none" ng-model="list_element">
           <ng-container *ngFor="let patient of data">
             <li class="patient-details"  *ngIf="checkFilters(patient.service,patient.statusKey,filter_check)">
+              <div style="float:left"> <!-- keep names and status left -->
               <div class="block">                  
                 <div *ngIf="(patient.statusKey == 'ActionNeeded')">
                   <img src='/app/images/action.png' style="padding: 3px; width:40px; height:35px;">
@@ -116,6 +118,8 @@
                 </div>
               </div>             
               <div class="block"><a href="./patientpage.html"> {{ patient.name }}</a></div>
+            </div>
+            <div style="float: right">
               <div class="block"> Patient ID: {{ patient.patientID }} </div>
               <div class="block"> Date of Birth: {{ patient.dob }} </div>
               <div id="service_ids" class="block" > Service ID: {{ patient.serviceID }}</div>
@@ -136,6 +140,7 @@
                   <img src='/app/images/pr.png' class="service_img">
                 </div>
               </div>
+            </div>
             </li>
           </ng-container>
         </ul>
