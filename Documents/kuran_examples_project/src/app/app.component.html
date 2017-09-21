@@ -1,10 +1,10 @@
 <div class="container" style="width: 100%;">
   <div style="font-size:20px">Cases</div>
   <div class="section"> Completed Cases over the past 7 days
-    <button type="button" class="collapse-button" data-toggle="collapse" data-target="#completed_cases">_</button>
+    <button type="button" class="collapse-button" data-toggle="collapse" data-target="#completed_collapse">_</button>
     <hr>
-    <div style="height: 100px; display: inline-block; border-spacing: 8px;
-  " id="completed_cases">
+    <div class="collapse in" id="completed_collapse">
+    <div style="height: 100px; display: inline-block; border-spacing: 8px;" id="completed_cases">
       <div class="cases_sq">
         <div class="cases_name">Benefits Verification</div>
         <div id="test_this" ng-repeat="patients in data" class="cases_number">{{getCount(data,'BV')}}</div>
@@ -26,21 +26,23 @@
         <div class="cases_number">{{getCount(data,'CoPay')}}</div>
       </div>
     </div>
+  </div>
     <br>
   </div>
   <br>
 
   <div class="section">Current Cases
-    <button type="button" class="collapse-button" data-toggle="collapse" data-target="#patient_section" > <!-- ng-click will toggle ng-show/hide --> 
-        <span [class.hide]="toggle1">+</span>      <!-- ng-show and ng-hide will replace this -->
-        <span [class.hide]="!toggle1">_</span>                  
+    <button type="button" class="collapse-button" data-toggle="collapse" data-target="#patient_collapse" > <!-- ng-click will toggle ng-show/hide --> 
+        <span [class.hide]="toggle1">_</span>      <!-- ng-show and ng-hide will replace this -->
+        <span [class.hide]="!toggle1">+</span>                  
       </button>
     <hr>
+    <div id="patient_collapse" class="collapse in">
     <div id="patient_section" class="section">Filter Options
-      <button type="button" class="collapse-button" data-toggle="collapse" data-target="#filter_options">_</button>
+      <button type="button" class="collapse-button" data-toggle="collapse" data-target="#filter_collapse">+</button>
       <hr>
-
-      <div id="filter_options" class="collapse">
+      <div id="filter_collapse" class="collapse">
+      <div id="filter_options">
         <div class="check_section">Status
           <div class="checkbox">
             <label><input type="checkbox" id="ch_completed" value="Completed" checked>Completed</label>
@@ -73,6 +75,7 @@
           <button ng-click="updateList(filter_check);" class="btn" style="background: #302D4D; color: white;" >Filter</button>
         </div>
       </div>
+    </div>
       <br>
       <br>
 
@@ -101,7 +104,7 @@
       </div>
       <br>
 
-      <a href="./patientpage.html" style="width: 100%" id="patient_list" class="collapse in">
+      <a href="./patientpage.html" style="width: 100%" id="patient_list" >
         <ul id="listPatients" class="patient-list" style="list-style-type:none" ng-model="list_element">
           <ng-container *ngFor="let patient of data">
             <li class="patient-details"  *ngIf="checkFilters(patient.service,patient.statusKey,filter_check)">
@@ -146,5 +149,6 @@
         </ul>
       </a>
     </div>
+  </div>
   </div>
 </div>
